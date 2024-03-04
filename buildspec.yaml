@@ -6,5 +6,11 @@ phases:
     commands:
       - docker build -t myapp .
 
+  post_build:
+    commands:
+      - docker login -u danyalharoon -p ~4##&qr@>zX2baj
+      - docker tag myapp:latest danyalharoon/goapp:latest
+      - docker push danyalharoon/goapp
+
 #artifacts:
  # files: myapp
