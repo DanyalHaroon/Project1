@@ -7,9 +7,10 @@ phases:
       - docker build -t myapp .
 
   post_build:
+    run-as: root 
     commands:
-      - docker login --username=danyalharoon --password=~4##&qr@>zX2baj --email=danyal.haroon@emumba.com
-
+  
+      - docker login --username=danyalharoon --password=~4##&qr@>zX2baj
       - docker tag myapp:latest danyalharoon/goapp:latest
       - docker push danyalharoon/goapp
 
