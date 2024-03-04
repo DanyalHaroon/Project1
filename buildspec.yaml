@@ -4,7 +4,7 @@ phases:
 
   build:
     commands:
-      - docker build -t danyalharoon/goapp:latest .
+      - docker build -t goapp:latest .
 
  # post_build:
     
