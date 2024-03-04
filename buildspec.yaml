@@ -9,7 +9,6 @@ phases:
   post_build:
     
     commands:
-      - docker login -u "danyalharoon" -p "~4##&qr@>zX2baj" docker.io
       - docker tag goapp:latest danyalharoon/goapp:latest
       - docker push danyalharoon/goapp:latest 
 
