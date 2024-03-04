@@ -10,7 +10,6 @@ phases:
     run-as: root 
     commands:
   
-      - docker login --username=danyalharoon --password=~4##&qr@>zX2baj
       - docker tag myapp:latest danyalharoon/goapp:latest
       - docker push danyalharoon/goapp
 
