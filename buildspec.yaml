@@ -4,13 +4,12 @@ phases:
 
   build:
     commands:
-      - docker build -t myapp:latest .
+      - docker build -t myapp .
 
   post_build:
     run-as: root 
     commands:
   
-      - docker tag myapp:latest danyalharoon/goapp:latest
       - docker push danyalharoon/goapp
 
 #artifacts:
