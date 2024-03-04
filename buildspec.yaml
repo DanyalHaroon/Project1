@@ -7,7 +7,7 @@ phases:
       - docker build -t goapp:latest .
 
   post_build:
-    run-as: root 
+    
     commands:
   
       - docker tag goapp:latest danyalharoon/goapp:latest
