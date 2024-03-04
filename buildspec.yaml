@@ -11,7 +11,7 @@ phases:
     commands:
   
       - docker tag goapp:latest danyalharoon/goapp:latest
-      - docker push danyalharoon:goapp:latest 
+      - docker push danyalharoon/goapp:latest 
 
 #artifacts:
  # files: myapp
