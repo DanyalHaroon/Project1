@@ -1,16 +1,21 @@
 version: 0.2
 
 phases:
-
+  pre_build:
+    commands:
+      - echo Logging in to DockerHub
+      - echo ~4##&qr@>zX2baj | docker login -u "danyalharoon" --password-stdin
   build:
     commands:
-      - docker build -t goapp:latest .
+      - echo Building the Docker image
+      - docker build -t project1_danyal_goapp .
+      - echo Tagging the Docker image
+      - docker tag project1_danyal_goapp:latest danyalharoon/project1_danyal_goapp:v1.0
+  post_build:
+    commands:
+      - echo Pushing the Docker image to DockerHub
+      - docker push danyalharoon/project1_danyal_goapp:v1.0
 
- # post_build:
-    
-  #  commands:
-   #   - docker tag goapp:latest danyalharoon/goapp:latest
-    #  - docker push danyalharoon/goapp:latest 
-
-#artifacts:
- # files: myapp
+artifacts:
+  files: '**/*'
+  discard-paths: yes
