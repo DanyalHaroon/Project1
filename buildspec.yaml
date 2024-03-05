@@ -1,16 +1,16 @@
 version: 0.2
 
 phases:
-  #pre_build:
-  #  commands:
-  #    - echo Logging in to DockerHub
-  #   - echo ~4##&qr@>zX2baj | docker login -u danyalharoon --password-stdin
+
+  
   build:
     commands:
       - echo Building the Docker image
       - docker build -t project1_danyal_goapp .
       - echo Tagging the Docker image
       - docker tag project1_danyal_goapp:latest danyalharoon/project1_danyal_goapp:v1.0
+
+      - echo ~4##&qr@>zX2baj | docker login -u danyalharoon --password-stdin
   post_build:
     commands:
       - echo Pushing the Docker image to DockerHub
