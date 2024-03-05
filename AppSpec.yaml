@@ -2,11 +2,11 @@ version: 0.0
 os: linux
 hooks:
   BeforeInstall:
-    - location: config/scripts/before_install.sh
+    - location: scripts/before_install.sh
       timeout: 300
       runas: root
 
   ApplicationStart:
-    - location: config/scripts/application_start.sh
+    - location: scripts/application_start.sh
       timeout: 300
       runas: root
