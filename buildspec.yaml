@@ -1,9 +1,9 @@
 version: 0.2
 
 phases:
-  pre_build:
-    commands:
-      - docker login -u danyalharoon -p  ~4##&qr@>zX2baj
+  #pre_build:
+   # commands:
+    #  - docker login -u danyalharoon -p  ~4##&qr@>zX2baj
   build:
     commands:
       - echo Building the Docker image
