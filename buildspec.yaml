@@ -1,10 +1,10 @@
 version: 0.2
 
 phases:
-  pre_build:
-    commands:
-       - echo Logging in to DockerHub
-       - echo dckr_pat_kAj1WJ6idXJcQxl5lE8N3JMdf0U | docker login -u "$DOCKER_USERNAME" --password-stdin
+  #pre_build:
+    #commands:
+    #   - echo Logging in to DockerHub
+     #  - echo | docker login -u "$DOCKER_USERNAME" --password-stdin
   build:
     commands:
       - echo Building the Docker image
