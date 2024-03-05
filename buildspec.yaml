@@ -1,10 +1,10 @@
 version: 0.2
 
 phases:
-  pre_build:
-    commands:
-      - echo Logging in to DockerHub
-      - echo ~4##&qr@>zX2baj | docker login -u danyalharoon --password-stdin
+  #pre_build:
+  #  commands:
+  #    - echo Logging in to DockerHub
+  #   - echo ~4##&qr@>zX2baj | docker login -u danyalharoon --password-stdin
   build:
     commands:
       - echo Building the Docker image
