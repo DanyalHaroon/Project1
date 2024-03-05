@@ -6,9 +6,9 @@ services:
     build:
       context: .
     ports:
-      - "8080:8080"
+      - "4040:4040"
     environment:
-      - PORT=8080
+      - PORT=4040
       - DB_HOST=mysql_container2
       - DB_USER=root
       - DB_PASS=danyal123
