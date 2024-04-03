@@ -1,0 +1,58 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: todoapp-deployment
+spec:
+  replicas: 1
+  selector:
+   matchLabels:
+     app: todoapp
+  template:
+   metadata:
+     labels:
+      app: todoapp
+   spec:
+    containers:
+    - name: todoapp
+      image: danyalharoon/project1_danyal_goapp:v1.0
+      env:
+      - name: DB_PASS
+        valueFrom:
+          secretKeyRef:
+            name: mysql-secret
+            key: password
+
+      - name: DB_HOST
+        value: mysql-service
+
+      - name: PORT
+        value: "4040"
+
+      - name: DB_USER
+        value: root
+
+      - name: DB_PORT
+        value: "3306"
+
+      - name: DB_DATABASE
+        value: gotodo
+
+
+      ports: 
+      - containerPort: 4040
+       
+   
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: todoapp-service
+spec:
+  type: ClusterIP
+  selector:
+    app: todoapp
+  ports:
+  - name: todoapp-port
+    port: 4040
+    targetPort: 4040
